@@ -4,6 +4,7 @@ public abstract class SortingProcess {
 
 	protected NumberChain numbers;
 	protected float sortingTime;
+	public static final String COMPLEXITY = "";
 	
 	public SortingProcess(NumberChain numbers) {
 		this.numbers = numbers;
