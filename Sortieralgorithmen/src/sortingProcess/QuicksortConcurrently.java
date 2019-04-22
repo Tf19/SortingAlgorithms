@@ -5,7 +5,7 @@ import java.util.concurrent.RecursiveAction;
 
 public class QuicksortConcurrently extends SortingProcess {
 	
-	public static final String COMPLEXITY = "?";
+	public static final String COMPLEXITY = "stark abhängig vom System, theoretisch O(log(n))";
 	public static final int SIZE_THRESHOLD = 100;
 	private static final ForkJoinPool THREADPOOL = new ForkJoinPool();
 

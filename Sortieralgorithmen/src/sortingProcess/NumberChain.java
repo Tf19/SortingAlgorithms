@@ -1,6 +1,10 @@
 package sortingProcess;
 
 public class NumberChain {
+	
+	public static final int MIN_NUMBER = 0;
+	public static final int MAX_NUMBER = 1000;
+	
 	private static final int MAX_NUMBER_CHAIN_LENGTH = 999999;
 	private static char[] allowedCharacters = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-'};
 	private static char[] allowedNumbers = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
@@ -78,10 +82,22 @@ public class NumberChain {
 		if(count > MAX_NUMBER_CHAIN_LENGTH) count = MAX_NUMBER_CHAIN_LENGTH;		
 		
 		for (int i = 0; i < count; i++) {
-			arrayToBeReturned[i] = (int) Math.round(Math.random()*1000);
+			int numberToBeWritten;
+			do numberToBeWritten = (int) Math.round(Math.random()*1000);
+			while(numberToBeWritten < MIN_NUMBER || numberToBeWritten > MAX_NUMBER);
+			arrayToBeReturned[i] = numberToBeWritten;
 			//System.out.println((int)Math.round(Math.random()*1000));
 		}
 		this.length = count;
 		return arrayToBeReturned;
+	}
+	
+	public String toString() {
+		String s = "";
+		for(int i = 0; i < getLength(); i++) {
+			s += get(i) + " ";
+			if(i%25 == 0) s += "\n";
+		}
+		return s;
 	}
 }
