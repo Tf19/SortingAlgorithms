@@ -33,7 +33,7 @@ public class Main {
 			System.out.println("Geben Sie die zu sortierenden Zahlen mit einem Minus voneinander getrennt ein.");
 			System.out.println("Beispiel: '3-5-6-9-12-23-0-7'");
 			System.out.println(
-					"Alternativ geben Sie eine Zahl ein, um eine Kette von Zufallszahlen mit eben dieser Länge zu generieren.");
+					"Alternativ geben Sie eine Zahl ein, um eine Kette von Zufallszahlen im Intervall 0 bis 1000 mit eben dieser Länge zu generieren.");
 			System.out.print("Eingabe: ");
 			
 			String enteredNumbers = sc1.nextLine();

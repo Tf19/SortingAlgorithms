@@ -13,6 +13,7 @@ public class Quicksort extends SortingProcess {
 		long startTime = System.nanoTime();
 		quicksort(0, numbers.getLength()-1);
 		sortingTime = System.nanoTime() - startTime;
+//		System.out.println(check());
 	}
 
 	/**
@@ -24,6 +25,7 @@ public class Quicksort extends SortingProcess {
 	private void quicksort(int lowerLimit, int upperLimit) {
 		if (lowerLimit < upperLimit) {
 			int pivot = numbers.get((lowerLimit + upperLimit)/2);
+//			int pivot = numbers.get(upperLimit);
 //			System.out.println("Pivot: " + pivot);
 			int i = lowerLimit;
 			int j = upperLimit;

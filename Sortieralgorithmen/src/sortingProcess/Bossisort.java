@@ -1,9 +1,8 @@
 package sortingProcess;
 
-import java.util.Arrays;
-
 /**
  * Vorteil: ultraschnell
+ * Nachteil: keine negativen Zahlen möglich (zumindest nicht ohne Weiteres)
  * Bedingung: möglicher Zahlenraum muss bekannt sein
  * besonders schnell, wenn wenige Zahlen sehr oft vorkommen
  * @author paulb
@@ -11,7 +10,7 @@ import java.util.Arrays;
  */
 public class Bossisort extends SortingProcess {
 	
-	public static final String COMPLEXITY = "O(n)";
+	public static final String COMPLEXITY = "O(log(n))";
 	private int[] numbersCount = new int[NumberChain.MAX_NUMBER+1];
 
 	public Bossisort(NumberChain numbers) {
