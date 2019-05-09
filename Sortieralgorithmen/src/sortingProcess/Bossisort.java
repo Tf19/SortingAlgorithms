@@ -10,7 +10,7 @@ package sortingProcess;
  */
 public class Bossisort extends SortingProcess {
 	
-	public static final String COMPLEXITY = "O(log(n))";
+	public static final String COMPLEXITY = "O(n+k) k: Länge des mögl. Zahlenintervalls";
 	private int[] numbersCount = new int[NumberChain.MAX_NUMBER+1];
 
 	public Bossisort(NumberChain numbers) {
@@ -19,7 +19,8 @@ public class Bossisort extends SortingProcess {
 
 	@Override
 	public void sort() {
-		long startTime = System.nanoTime();
+		long startTime = System.
+				nanoTime();
 		for(int i = 0; i < numbers.getLength(); i++) numbersCount[numbers.get(i)] ++;
 
 		
